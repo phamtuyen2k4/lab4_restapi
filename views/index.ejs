@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+  <header>
+    <div>
+
+      <a href="/AddForm">Add</a>
+
+    </div>
+  </header>
+
+<p>Danh sách User</p>
+
+  <ul>
+    <% users.forEach(function (user) { %>
+      <li><%= user.name %> - <%= user.email %></li>
+      <a href="/deleteUser/<%= user._id %>">Delete</a>
+      <a href="/updateUser/<%= user._id %>">Update</a>
+    <% }) %>
+
+  </ul>
+
+
+
+  </body>
+</html>
